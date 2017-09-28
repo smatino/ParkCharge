@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - TestP@saturno.optimaitalia.com" uuid="4c892ad1-19ac-48cf-b90f-b54dd9f9396b">
+    <database-info product="MySQL" version="5.5.52" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.40 ( Revision: 402933ef52cad9aa82624e80acbea46e3a701ce6 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="TestP"/>
+    <table name="Cliente" schema="" catalog="TestP" type="TABLE">
+      <column name="idCliente" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="CF" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="nome" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="cognome" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="idTipoCliente" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idCliente"/>
+      <foreign-key name="FK_Cliente_TipoCliente" columns="idTipoCliente" ref-table="TipoCliente" ref-schema="" ref-catalog="TestP" ref-columns="idTipoCliente" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK__Cliente_FED" table="Feedback" schema="" catalog="TestP" columns="idCliente"/>
+      <exported-key name="FK__Cliente" table="Prenotazione" schema="" catalog="TestP" columns="idCliente"/>
+      <exported-key name="FK_Servizio_Cliente" table="Servizio" schema="" catalog="TestP" columns="idCliente"/>
+      <index name="FK_Cliente_TipoCliente" unique="false" columns="idTipoCliente"/>
+    </table>
+    <table name="Disponibilita" schema="" catalog="TestP" type="TABLE">
+      <column name="idDisponibilita" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="idMonth" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="idDay" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <column name="idHour" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4" def="MA=="/>
+      <primary-key name="PRIMARY" columns="idDisponibilita"/>
+      <foreign-key name="FK_Disponibilita_FasceOrarie" columns="idHour" ref-table="FasceOrarie" ref-schema="" ref-catalog="TestP" ref-columns="idHours" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_Disponibilita_Giorni" columns="idDay" ref-table="Giorni" ref-schema="" ref-catalog="TestP" ref-columns="idDay" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_Disponibilita_Mesi" columns="idMonth" ref-table="Mesi" ref-schema="" ref-catalog="TestP" ref-columns="idMonth" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK_Servizio_Disponibilita" table="Servizio" schema="" catalog="TestP" columns="idDisponibilita"/>
+      <index name="FK_Disponibilita_FasceOrarie" unique="false" columns="idHour"/>
+      <index name="FK_Disponibilita_Giorni" unique="false" columns="idDay"/>
+      <index name="FK_Disponibilita_Mesi" unique="false" columns="idMonth"/>
+    </table>
+    <table name="FasceOrarie" schema="" catalog="TestP" type="TABLE">
+      <column name="idHours" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="H00" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H01" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H02" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H03" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H04" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H05" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H06" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H07" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H08" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H09" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H10" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H11" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H12" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H13" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H14" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H15" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H16" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H17" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H18" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H19" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H20" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H21" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H22" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H23" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <column name="H24" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7" def="YicwJw=="/>
+      <primary-key name="PRIMARY" columns="idHours"/>
+      <exported-key name="FK_Disponibilita_FasceOrarie" table="Disponibilita" schema="" catalog="TestP" columns="idHour"/>
+    </table>
+    <table name="Feedback" schema="" catalog="TestP" type="TABLE">
+      <column name="idFeedback" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="idCliente" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="idServizio" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="valutazione" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" def="MA=="/>
+      <column name="descrizione" sqlType="VARCHAR" precision="500" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="idFeedback"/>
+      <foreign-key name="FK__Cliente_FED" columns="idCliente" ref-table="Cliente" ref-schema="" ref-catalog="TestP" ref-columns="idCliente" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK__Servizio_FED" columns="idServizio" ref-table="Servizio" ref-schema="" ref-catalog="TestP" ref-columns="idServizio" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK__Cliente_FED" unique="false" columns="idCliente"/>
+      <index name="FK__Servizio_FED" unique="false" columns="idServizio"/>
+    </table>
+    <table name="Giorni" schema="" catalog="TestP" type="TABLE">
+      <column name="idDay" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="lunedi" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="martedi" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="mercoledi" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="giovaedi" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="venerdi" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="sabato" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="domenica" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <primary-key name="PRIMARY" columns="idDay"/>
+      <exported-key name="FK_Disponibilita_Giorni" table="Disponibilita" schema="" catalog="TestP" columns="idDay"/>
+    </table>
+    <table name="Mesi" schema="" catalog="TestP" type="TABLE">
+      <column name="idMonth" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="gennaio" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="febbraio" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="marzo" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="aprile" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="maggio" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="giugno" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="luglio" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="agosto" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="settembre" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="ottobre" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="novembre" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="dicembre" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <primary-key name="PRIMARY" columns="idMonth"/>
+      <exported-key name="FK_Disponibilita_Mesi" table="Disponibilita" schema="" catalog="TestP" columns="idMonth"/>
+    </table>
+    <table name="Prenotazione" schema="" catalog="TestP" type="TABLE">
+      <column name="idPrenotazione" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="idServizio" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="idCliente" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="dataPrenotazione" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="costoPrenotazione" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="dataInizioServizio" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="dataFineServizio" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="idPrenotazione"/>
+      <foreign-key name="FK__Servizio" columns="idServizio" ref-table="Servizio" ref-schema="" ref-catalog="TestP" ref-columns="idServizio" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK__Cliente" columns="idCliente" ref-table="Cliente" ref-schema="" ref-catalog="TestP" ref-columns="idCliente" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="FK__Cliente" unique="false" columns="idCliente"/>
+      <index name="FK__Servizio" unique="false" columns="idServizio"/>
+    </table>
+    <table name="Servizio" schema="" catalog="TestP" type="TABLE">
+      <column name="idServizio" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="costo" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="inizio_servizio" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="fine_servizio" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="idTipoServizio" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="coordinata_X" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="idTipoPresa" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="coordinata_Y" sqlType="DOUBLE" precision="22" scale="0" nullable="true" jdbcType="8"/>
+      <column name="idCliente" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="idDisponibilita" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="idTipoParcheggio" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idServizio"/>
+      <foreign-key name="FK_Servizio_TipoParcheggio" columns="idTipoParcheggio" ref-table="TipoParcheggio" ref-schema="" ref-catalog="TestP" ref-columns="idTipoParcheggio" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_Servizio_Cliente" columns="idCliente" ref-table="Cliente" ref-schema="" ref-catalog="TestP" ref-columns="idCliente" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_Servizio_Disponibilita" columns="idDisponibilita" ref-table="Disponibilita" ref-schema="" ref-catalog="TestP" ref-columns="idDisponibilita" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_Servizio_TipoServizio" columns="idTipoServizio" ref-table="TipoServizio" ref-schema="" ref-catalog="TestP" ref-columns="idTipoServizio" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="FK__Servizio_FED" table="Feedback" schema="" catalog="TestP" columns="idServizio"/>
+      <exported-key name="FK__Servizio" table="Prenotazione" schema="" catalog="TestP" columns="idServizio"/>
+      <exported-key name="FK_ServizioTipoPresa_Servizio" table="ServizioTipoPresa" schema="" catalog="TestP" columns="idServizio"/>
+      <index name="FK_Servizio_Disponibilita" unique="false" columns="idDisponibilita"/>
+      <index name="FK_Servizio_TipoParcheggio" unique="false" columns="idTipoParcheggio"/>
+      <index name="IXFK_Servizio_Cliente" unique="false" columns="idCliente"/>
+      <index name="IXFK_Servizio_TipoPresa" unique="false" columns="idTipoPresa"/>
+      <index name="IXFK_Servizio_TipoServizio" unique="false" columns="idTipoServizio"/>
+    </table>
+    <table name="ServizioTipoPresa" schema="" catalog="TestP" type="TABLE">
+      <column name="idServizioTipoPresa" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="idServizio" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="idTipoPresa" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idServizioTipoPresa"/>
+      <foreign-key name="FK_ServizioTipoPresa_TipoPresa" columns="idTipoPresa" ref-table="TipoPresa" ref-schema="" ref-catalog="TestP" ref-columns="idTipoPresa" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="FK_ServizioTipoPresa_Servizio" columns="idServizio" ref-table="Servizio" ref-schema="" ref-catalog="TestP" ref-columns="idServizio" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="IXFK_ServizioTipoPresa_Servizio" unique="false" columns="idServizio"/>
+      <index name="IXFK_ServizioTipoPresa_TipoPresa" unique="false" columns="idTipoPresa"/>
+    </table>
+    <table name="TipoCliente" schema="" catalog="TestP" type="TABLE">
+      <column name="idTipoCliente" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="descrizione" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="idTipoCliente"/>
+      <exported-key name="FK_Cliente_TipoCliente" table="Cliente" schema="" catalog="TestP" columns="idTipoCliente"/>
+    </table>
+    <table name="TipoParcheggio" schema="" catalog="TestP" type="TABLE">
+      <column name="idTipoParcheggio" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="descizione" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12" def="JzAn"/>
+      <primary-key name="PRIMARY" columns="idTipoParcheggio"/>
+      <exported-key name="FK_Servizio_TipoParcheggio" table="Servizio" schema="" catalog="TestP" columns="idTipoParcheggio"/>
+    </table>
+    <table name="TipoPresa" schema="" catalog="TestP" type="TABLE">
+      <column name="idTipoPresa" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tipo" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="potenza" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idTipoPresa"/>
+      <exported-key name="FK_ServizioTipoPresa_TipoPresa" table="ServizioTipoPresa" schema="" catalog="TestP" columns="idTipoPresa"/>
+    </table>
+    <table name="TipoServizio" schema="" catalog="TestP" type="TABLE">
+      <column name="idTipoServizio" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="descrizione" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="idTipoServizio"/>
+      <exported-key name="FK_Servizio_TipoServizio" table="Servizio" schema="" catalog="TestP" columns="idTipoServizio"/>
+    </table>
+  </data-source>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/parkcharge/contoller/BaseController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/parkcharge/exception/ApplicationException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/parkcharge/exception/CustomValidator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/parkcharge/exception/RestWebServiceException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/parkcharge/exception/ServiceException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/parkcharge/exception/ValidationException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/parkcharge/mapper/CustomJsonObjectMapper.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/parkcharge/services/ValidationService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/parkcharge/services/impl/ValidationServiceImpl.java" charset="UTF-8" />
+  </component>
+</project>

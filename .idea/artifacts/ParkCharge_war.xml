@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ParkCharge:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="park-and-charge.war">
+      <element id="artifact" artifact-name="ParkCharge:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -4,7 +4,7 @@
     <persistence-unit name="NewPersistenceUnit">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://172.30.218.120:3306/parkandchargeDB"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://mysql.parkandcharge.svc:3306/parkandchargeDB"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
             <property name="hibernate.connection.username" value="userY5A"/>
             <property name="hibernate.connection.password" value="Pa10HsIRBNBIetYu"/>

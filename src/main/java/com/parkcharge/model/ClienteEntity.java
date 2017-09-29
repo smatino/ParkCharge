@@ -8,7 +8,7 @@ import java.util.List;
  * Created by smatino on 24/08/2017.
  */
 @Entity
-@Table(name = "Cliente", schema = "", catalog = "TestP")
+@Table(name = "Cliente", schema = "", catalog = "parkandchargeDB")
 public class ClienteEntity implements Serializable {
     private int idCliente;
     private String cf;

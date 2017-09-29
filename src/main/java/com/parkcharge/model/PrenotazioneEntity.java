@@ -10,7 +10,7 @@ import java.util.Date;
  * Created by smatino on 29/08/2017.
  */
 @Entity
-@Table(name = "Prenotazione", schema = "", catalog = "TestP")
+@Table(name = "Prenotazione", schema = "", catalog = "parkandchargeDB")
 public class PrenotazioneEntity {
     private int idPrenotazione;
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")

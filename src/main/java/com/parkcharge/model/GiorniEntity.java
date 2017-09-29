@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by smatino on 28/08/2017.
  */
 @Entity
-@Table(name = "Giorni", schema = "", catalog = "TestP")
+@Table(name = "Giorni", schema = "", catalog = "parkandchargeDB")
 public class GiorniEntity {
     private int idDay;
     private boolean lunedi;

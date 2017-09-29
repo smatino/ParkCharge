@@ -11,7 +11,7 @@ import java.util.List;
  * Created by smatino on 24/08/2017.
  */
 @Entity
-@Table(name = "Servizio", schema = "", catalog = "TestP")
+@Table(name = "Servizio", schema = "", catalog = "parkandchargeDB")
 public class ServizioEntity {
     private int idServizio;
     private ClienteEntity idCliente;

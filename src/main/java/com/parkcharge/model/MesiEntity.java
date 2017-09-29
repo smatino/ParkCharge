@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Created by smatino on 28/08/2017.
  */
 @Entity
-@Table(name = "Mesi", schema = "", catalog = "TestP")
+@Table(name = "Mesi", schema = "", catalog = "parkandchargeDB")
 public class MesiEntity {
     private int idMonth;
     private boolean gennaio;

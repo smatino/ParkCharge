@@ -7,7 +7,7 @@ import java.util.List;
  * Created by smatino on 31/08/2017.
  */
 @Entity
-@Table(name = "Feedback", schema = "", catalog = "TestP")
+@Table(name = "Feedback", schema = "", catalog = "parkandchargeDB")
 public class FeedbackEntity {
     private int idFeedback;
     private ClienteEntity cliente;

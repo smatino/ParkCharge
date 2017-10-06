@@ -12,7 +12,7 @@ public class GiorniEntity {
     private boolean lunedi;
     private boolean martedi;
     private boolean mercoledi;
-    private boolean giovaedi;
+    private boolean giovedi;
     private boolean venerdi;
     private boolean sabato;
     private boolean domenica;
@@ -60,12 +60,12 @@ public class GiorniEntity {
 
     @Basic
     @Column(name = "giovaedi", nullable = false, insertable = true, updatable = true)
-    public boolean isGiovaedi() {
-        return giovaedi;
+    public boolean isGiovedi() {
+        return giovedi;
     }
 
-    public void setGiovaedi(boolean giovaedi) {
-        this.giovaedi = giovaedi;
+    public void setGiovedi(boolean giovedi) {
+        this.giovedi = giovedi;
     }
 
     @Basic
@@ -109,7 +109,7 @@ public class GiorniEntity {
         if (lunedi != that.lunedi) return false;
         if (martedi != that.martedi) return false;
         if (mercoledi != that.mercoledi) return false;
-        if (giovaedi != that.giovaedi) return false;
+        if (giovedi != that.giovedi) return false;
         if (venerdi != that.venerdi) return false;
         if (sabato != that.sabato) return false;
         if (domenica != that.domenica) return false;
@@ -123,7 +123,7 @@ public class GiorniEntity {
         result = 31 * result + (lunedi ? 1 : 0);
         result = 31 * result + (martedi ? 1 : 0);
         result = 31 * result + (mercoledi ? 1 : 0);
-        result = 31 * result + (giovaedi ? 1 : 0);
+        result = 31 * result + (giovedi ? 1 : 0);
         result = 31 * result + (venerdi ? 1 : 0);
         result = 31 * result + (sabato ? 1 : 0);
         result = 31 * result + (domenica ? 1 : 0);

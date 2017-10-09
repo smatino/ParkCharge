@@ -19,7 +19,7 @@ public class DisponibilitaEntity {
 
     public final Boolean allDay(){
         if( giorni.isDomenica() && giorni.isLunedi() && giorni.isMartedi()
-                && giorni.isMercoledi()&& giorni.isGiovaedi() && giorni.isVenerdi()
+                && giorni.isMercoledi()&& giorni.isGiovedi() && giorni.isVenerdi()
                 && giorni.isSabato() ){
             return true;
         }else{

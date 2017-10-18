@@ -104,4 +104,10 @@ public class UserController extends BaseController {
             throw new RestWebServiceException(e);
         }
     }
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @ResponseBody
+    private Boolean test() throws ApplicationException {
+       return true;
+    }
 }
